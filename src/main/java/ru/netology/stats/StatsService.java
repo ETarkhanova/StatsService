@@ -45,7 +45,7 @@ public class StatsService {
     public int salesBelowAverage(int[] sales) {
         int counter = 0;
         for (int sale : sales) {
-            if (sale < 15) {
+            if (sale < findAverage(sales)) {
                 counter++;
             }
         }
@@ -55,7 +55,7 @@ public class StatsService {
     public int salesOverAverage(int[] sales) {
         int counter = 0;
         for (int sale : sales) {
-            if (sale > 15) {
+            if (sale > findAverage(sales)) {
                 counter++;
             }
         }
